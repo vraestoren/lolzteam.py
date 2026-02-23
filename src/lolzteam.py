@@ -310,7 +310,7 @@ class Lolzteam:
             "thread_node_id": thread_node_id
         }
         filtered_data = {
-            key: value for key, value in payload.items() if value is not None
+            key: value for key, value in data.items() if value is not None
         }
         return self.session.put(
             f"{self.api}/posts/{post_id}", data=filtered_data).json()
@@ -402,7 +402,7 @@ class Lolzteam:
             "extra_timestamp": extra_timestamp
         }
         filtered_data = {
-            key: value for key, value in payload.items() if value is not None
+            key: value for key, value in data.items() if value is not None
         }
         return self.session.post(
             f"{self.api}/users", data=filtered_data).json()
@@ -455,7 +455,7 @@ class Lolzteam:
             "fields": fields,
         }
         filtered_data = {
-            key: value for key, value in payload.items() if value is not None
+            key: value for key, value in data.items() if value is not None
         }
         return self.session.put(
             f"{self.api}/users/{user_id}", data=filtered_data).json()
@@ -809,7 +809,7 @@ class Lolzteam:
             "data_limit": data_limit
         }
         filtered_data = {
-            key: value for key, value in payload.items() if value is not None
+            key: value for key, value in data.items() if value is not None
         }
         return self.session.post(
             f"{self.api}/search/threads", data=filtered_data).json()
@@ -833,7 +833,7 @@ class Lolzteam:
             "data_limit": data_limit
         }
         filtered_data = {
-            key: value for key, value in payload.items() if value is not None
+            key: value for key, value in data.items() if value is not None
         }
         return self.session.post(
             f"{self.api}/search/posts", data=filtered_data).json()
@@ -855,7 +855,7 @@ class Lolzteam:
             "limit": limit
         }
         filtered_data = {
-            key: value for key, value in payload.items() if value is not None
+            key: value for key, value in data.items() if value is not None
         }
         return self.session.post(
             f"{self.api}/search/profile-posts", data=filtered_data).json()
@@ -877,7 +877,7 @@ class Lolzteam:
             "limit": data_limit
         }
         filtered_data = {
-            key: value for key, value in payload.items() if value is not None
+            key: value for key, value in data.items() if value is not None
         }
         return self.session.post(
             f"{self.api}/search", data=filtered_data).json()
@@ -895,7 +895,7 @@ class Lolzteam:
             "limit": limit
         }
         filtered_data = {
-            key: value for key, value in payload.items() if value is not None
+            key: value for key, value in data.items() if value is not None
         }
         return self.session.post(
             f"{self.api}/search/tagged", data=filtered_data).json()
