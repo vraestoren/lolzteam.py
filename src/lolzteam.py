@@ -631,8 +631,6 @@ class Lolzteam:
         data = self._filter({"notification_id": notification_id})
         return self._post("/notifications/read", data)
 
-    # Search
-
     def search_threads(
             self,
             query: str,
